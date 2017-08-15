@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body ng-app="myApp">
+
+    <div ng-controller="controller2">
+        <div class="input-group">
+            <span class="input-group-addon">Enter The Number : </span>
+            <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info" ng-model="number">
+         </div>
+         <br>
+         
+         <button type="button" class="btn" ng-click="CalculateSquare()">Calculate Square</button>
+         
+         <button type="button" class="btn" ng-click="CalculateFactorial()">Calculate Factorial</button>
+         
+         <button type="button" class="btn" ng-click="CalculateCube()">Calculate Cube</button>
+         
+        <h3>{{value}}</h3>
+    
+    
+    
+    </div>
+
+</body>
+
+<script src="Assignment2Controller.js"></script>
+</html>

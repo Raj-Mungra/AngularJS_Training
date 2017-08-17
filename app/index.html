@@ -11,7 +11,9 @@
   
 <link rel="stylesheet" href="style.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-route.js"></script>
 </head>
    
 <body ng-app="myApp">
@@ -20,19 +22,36 @@
       <h2> AngularJS Assignment
   </div>
  </div>
-
+<div>
 <ul class="nav nav-pills nav-stacked col-xs-2">
-  <li class="active"><a href="#">Assignment 1</a></li>
-  <li><a href="assignment2">Assignment 2</a></li>
-  
+  <li><a href="#assignment1">Assignment 1</a></li>
+  <li><a href="#assignment2">Assignment 2</a></li>
+   <li><a href="#assignment3">Assignment 3</a></li>
+   <li><a href="#assignment4">Assignment 4</a></li>
+   <li><a href="#assignment5">Assignment 5</a></li>
+   <li><a href="#assignment6">Assignment 6</a></li>
 </ul>
+</div>
 
-
-<div class= "col-xs-8-offset-1">
+<div class= "col-xs-8">
    <div ng-view></div>
 </div>
-</body>
-<script src="/app.js"></script>
-<script src="/assignment2/Assignment2Controller.js"></script>
 
+<script src="app.js"></script>
+
+<!-- Controller for Assignment 2 -->
+<script src="assignment2/Assignment2Controller.js"></script>
+
+<!-- Controller and Service for Assignment 3 -->
+<script src="assignment3/Assignment3Service.js"></script>
+<script src="assignment3/Assignment3Controller.js"></script>
+
+<!-- Controller for Assignment 5 -->
+<script src="assignment5/Assignment5Controller.js"></script>
+
+<!-- Controller and Service for Assignment 6 -->
+<script src="assignment6/Assignment6Service.js"></script>
+<script src="assignment6/Assignment6Controller.js"></script>
+
+</body>
 </html>

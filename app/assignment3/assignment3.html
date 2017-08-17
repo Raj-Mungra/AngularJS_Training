@@ -1,0 +1,22 @@
+<div ng-controller="controller3"> 
+        <div class="input-group">
+            <span class="input-group-addon">Enter Name : </span>
+            <input id="msg" type="text" class="form-control" name="msg" placeholder="Enter name" ng-model="name">
+         </div>
+         <br>
+         
+            <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Technology</th>
+            </tr>
+            <tr ng-repeat="x in names | filter :{Name : name}  | orderBy : 'Id'">
+                <td>{{ x.Id }}</td>
+                <td>{{ x.Name }}</td>
+                <td>{{ x.Technology }}</td>
+            </tr>
+            </table>
+
+</div>
+    

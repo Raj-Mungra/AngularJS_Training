@@ -1,0 +1,74 @@
+<div ng-controller="controller5">
+
+        <div style="width:550px">
+            <h2 class="text-center">Registration Form</h2>
+        </div>
+
+
+    <form name="RegistrationForm" >
+        <div class="input-group">
+            <span class="input-group-addon">Enter First Name : </span>
+            <input id="firstName" type="text" class="form-control" name="firstName" placeholder="First Name" ng-model="firstName" pattern="[a-zA-z]+" required>
+            <span style="color:red" ng-show="RegistrationForm.firstName.$touched && RegistrationForm.firstName.$invalid">First name is required.</span>
+        </div>
+         <br>
+        
+        <div class="input-group">
+            <span class="input-group-addon">Enter Last Name : </span>
+            <input id="lastName" type="text" class="form-control" name="lastName" placeholder="Last Name" ng-model="lastName" pattern="[a-zA-z]+" required>
+            <span style="color:red" ng-show="RegistrationForm.lastName.$touched && RegistrationForm.lastName.$invalid">Last name is required.</span>
+        </div>
+         <br>
+         
+         <div class="input-group">
+            <span class="input-group-addon">Enter Email-Id : </span>
+            <input id="email" type="email" class="form-control" name="email" placeholder="Email-Id" ng-model="EmailId" required>
+            <span style="color:red" ng-show="RegistrationForm.email.$touched && RegistrationForm.email.$invalid">Email is required.</span>
+        </div>
+         <br>
+
+        <div class="input-group">
+            <span class="input-group-addon">Enter Mobile Number : </span>
+            <input id="mobileNumber" type="number" class="form-control" name="mobileNumber" placeholder="Mobile Number(10 digits)" ng-model="mobileNumber" pattern="[7-9][0-9]{9}" required>
+            <span style="color:red" ng-show="RegistrationForm.mobileNumber.$touched && RegistrationForm.mobileNumber.$invalid">Mobile Number is required.</span>
+        </div>
+        <br>
+         <div class="input-group">
+            <span class="input-group-addon">Select Gender : </span>
+            <select ng-model="Gender">
+                <option value="" selected disabled>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            
+        </div>
+
+        <br>
+         <div class="input-group">
+            <span class="input-group-addon">Select Location : </span>
+            <select ng-model="Location">
+                <option value="" selected disabled>Select Location</option>
+                <option value="Pune">Pune</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bangalore">Bangalore</option>
+            </select>
+        </div>
+        <br>
+        <div class="text-center" style="width:500px">
+             <button type="button" class="btn" ng-click="show()" ng-disabled="RegistrationForm.firstName.$invalid || RegistrationForm.lastName.$invalid || RegistrationForm.email.$invalid || RegistrationForm.mobileNumber.$invalid">Save</button>
+             <button type="button" class="btn" ng-click="reset()">Reset</button>
+        </div>
+    </form>
+       <div ng-show="displayResult">
+           <h5><b>First Name : </b>{{firstName}}</h5>
+           <h5><b>Last Name : </b>{{lastName}}</h5>
+           <h5><b>Email : </b>{{EmailId}}</h5>
+           <h5><b>Mobile Number : </b>{{mobileNumber}}</h5>
+           <h5><b>Gender : </b>{{Gender}}</h5>
+           <h5><b>Location : </b>{{Location}}</h5>
+
+       </div>
+        
+   
+        
+</div>

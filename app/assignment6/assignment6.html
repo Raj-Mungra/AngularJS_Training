@@ -1,0 +1,16 @@
+<div ng-controller="controller6"> 
+            <table>
+            <tr>
+                <th><input type="checkbox" ng-model=""></th>
+                <th>OrderName</th>
+                <th>Price</th>
+            </tr>
+            <tr ng-repeat="x in OrderDetails">
+                <td><input type="checkbox"></td>
+                <td>{{ x.OrderName }}</td>
+                <td>{{ x.Price }}</td>
+            </tr>
+            </table>
+
+</div>
+    

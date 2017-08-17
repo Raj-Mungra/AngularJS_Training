@@ -1,5 +1,4 @@
-var app=angular.module("myApp",[]);
-app.controller("controller2",function($scope){
+angular.module("myApp").controller("controller2",function($scope){
     
     $scope.CalculateSquare = function(){
         $scope.value =  $scope.number*$scope.number;

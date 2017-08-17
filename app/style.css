@@ -1,0 +1,31 @@
+table, th , td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.input-group-addon{
+
+    min-width: 165px;
+    text-align: center;
+}
+
+.input-group .form-control{
+    width: 400px;
+}
+
+select {
+    width: 400px;
+    padding: 5px 20px;
+    margin: 0px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

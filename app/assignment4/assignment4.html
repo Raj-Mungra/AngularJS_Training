@@ -1,0 +1,28 @@
+<div>
+        <div class="input-group">
+            <span class="input-group-addon">Enter First Name : </span>
+            <input id="firstName" type="text" class="form-control" name="firstName" placeholder="First Name" ng-model="firstName">
+         </div>
+         <br>
+        
+        <div class="input-group">
+            <span class="input-group-addon">Enter Last Name : </span>
+            <input id="lastName" type="text" class="form-control" name="lastName" placeholder="Last Name" ng-model="lastName">
+         </div>
+         <br>
+         
+        <div class="input-group">
+            <span class="input-group-addon">Enter Amount : </span>
+            <input id="amt" type="text" class="form-control" name="amt" placeholder="Amount" ng-model="amount">
+         </div>
+         <br>
+         <div>
+        <h4><b>First Name :</b>{{firstName | lowercase}}</h4>
+         <h4><b>First Name :</b>{{firstName | uppercase}}</h4>
+         
+        <h4><b>Last Name :</b>{{lastName | lowercase}}</h4>
+         <h4><b>Last Name :</b>{{lastName | uppercase}}</h4>
+
+         <h4><b>Amount :</b>{{amount | currency }}</h4>
+         </div>
+    </div>

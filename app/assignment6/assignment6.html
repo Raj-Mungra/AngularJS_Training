@@ -1,14 +1,20 @@
 <div ng-controller="controller6"> 
             <table>
             <tr>
-                <th><input type="checkbox" ng-model=""></th>
+                <th><input type="checkbox" ng-model="mainCheckbox" ng-disabled="ItemCheckbox" ng-change="mainCheckbox ? getTotalPrice() : getUpdatedTotalPrice()"></th>
                 <th>OrderName</th>
                 <th>Price</th>
             </tr>
-            <tr ng-repeat="x in OrderDetails">
-                <td><input type="checkbox"></td>
-                <td>{{ x.OrderName }}</td>
-                <td>{{ x.Price }}</td>
+            <tr ng-repeat="item in OrderDetails">
+               
+                <td><input type="checkbox" name="ItemCheckbox" ng-model="item.checked" ng-checked="mainCheckbox" ng-disabled="mainCheckbox" ng-change="updateTotalPrice(item)"></td>
+                <td>{{ item.OrderName }}</td>
+                <td>{{ item.Price }}</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Total</td>
+                <td>{{getTotalPrice()}}</td>
             </tr>
             </table>
 
